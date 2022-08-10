@@ -8,6 +8,7 @@ import { ArticleVideoComponent } from "./video/article.video.component";
 
 export const articleEntries: Type<AbstractArticleComponent>[] = [
     ArticleFeatureComponent,
+    ArticleVideoComponent,
     ArticleNormalComponent
 ];
 

@@ -1,9 +1,12 @@
-
 export abstract class Article {
-    id: string
+    videoUrl?: string;
+    description?: string;
+    adBannerUrl?: string;
+    featureImgUrl?: string;
+    id: string;
     title: string;
     author: string;
-    publishedAt: string; //date time in ISO format 
+    publishedAt: string; //date time in ISO format
     url: string;
     type: ArticleType;
 }
@@ -17,7 +20,7 @@ export class FeaturedArticle extends  Article{
 }
 
 export class VideoArticle extends  Article{
-    videoUrl: string;
+    videoUrl: any;
 }
 
 export class FeaturedAdArticle extends  Article{

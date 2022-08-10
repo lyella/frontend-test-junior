@@ -1,7 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 
-import { Article } from "src/app/model/article";
+import { Article, FeaturedArticle, NormalArticle } from "src/app/model/article";
 import { AbstractArticleComponent } from "../abstract.article.component";
 
 @Component({
@@ -10,8 +10,10 @@ import { AbstractArticleComponent } from "../abstract.article.component";
     styleUrls: ['./article.video.component.scss']
 })
 export class ArticleVideoComponent extends AbstractArticleComponent {
-
-    @Input() article: Article;
+    articleNormal: NormalArticle;
+    articleVideo: ArticleVideoComponent;
+    article: Article;
+    articleFeature: FeaturedArticle;
 
     get safeVideoUrl() {
         return this.domSanitize.bypassSecurityTrustResourceUrl(this.article.videoUrl);

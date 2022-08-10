@@ -1,3 +1,27 @@
 :host {
+  .article-container {
+    width: 100%;
+  }
 
+  .article-list-holder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
+      padding: 3%;
+    }
+  }
+
+  .article-video {
+    margin: 50px auto;
+    text-align: center;
+    @media only screen and (max-width: 600px) {
+      margin: 20px auto;
+    }
+  }
 }

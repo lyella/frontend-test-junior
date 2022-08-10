@@ -65,6 +65,6 @@ export class ZyllemApiService {
             }
         ];
 
-        return of(articles).pipe(delay(1000));
+        return of(articles).pipe();
     }
 }

@@ -12,8 +12,9 @@
   <h3>Put below a recently published video article given there is one or more video article types in the list.</h3>
 
   <div class="article-video">
-    <ng-container *ngIf="videoArticleHighlight">
+    <ng-container *ngIf="videoArticle">
       <!-- put the title and the article video component here -->
+      <article-renderer-component [articles]="videoArticle"></article-renderer-component>
     </ng-container>
   </div>
 
@@ -27,8 +28,9 @@
         <article-renderer-component [articles]="articles"></article-renderer-component>
       </ng-container>
     </div>
-  </div><!--.article-container-->
-  
+  </div>
+  <!--.article-container-->
+
   <div class="bonus-point-container">
     <h3>Instructions:</h3>
     <ul>

@@ -1,0 +1,24 @@
+:host {
+  .article-list-holder {
+    display: flex;
+  }
+
+  .article-item {
+    margin-top: 30px;
+    @media only screen and (max-width: 600px) {
+      margin-top: 15px;
+    }
+  }
+
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 250px;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin: 0 0 10px;
+    }
+  }
+}

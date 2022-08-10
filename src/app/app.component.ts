@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 
 import { ZyllemApiService } from "./app.service";
-import { Article, VideoArticle } from './model/article';
+import { Article, ArticleType, VideoArticle } from './model/article';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +23,11 @@ export class AppComponent implements OnInit {
   videoArticleHighlight: VideoArticle;
 
   get articles() {
-    return this.results;
+    return this.results.filter((val) => val.type !== ArticleType.VIDEO);
+  }
+
+  get videoArticle() {
+    return this.results.filter((val) => val.type === ArticleType.VIDEO);
   }
 
   ngOnInit(): void {
